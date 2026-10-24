@@ -1,0 +1,25 @@
+{
+  "name": "backend-workshop-part1",
+  "version": "1.0.0",
+  "description": "Node.js + Express v5 ile backend'e giriş workshop'u (Part 1)",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "ornek:1": "node ornekler/01-node-temelleri/index.js",
+    "ornek:2": "node --watch ornekler/02-http-sunucu/server.js",
+    "ornek:3": "node --watch ornekler/03-express-giris/index.js",
+    "ornek:4": "node --watch ornekler/04-middleware/index.js",
+    "ornek:5": "node --watch ornekler/05-todo-api/baslangic.js",
+    "ornek:5-bitmis": "node --watch ornekler/05-todo-api/bitmis.js",
+    "ornek:6": "node ornekler/06-json-db/index.js",
+    "slaytlar": "npx @marp-team/marp-cli@latest slides/part1.md --preview",
+    "slaytlar:html": "npx @marp-team/marp-cli@latest --no-stdin slides/part1.md -o slides/part1.html",
+    "slaytlar:pdf": "npx @marp-team/marp-cli@latest --no-stdin slides/part1.md --pdf -o slides/part1.pdf"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

@@ -1,0 +1,78 @@
+### VS Code "REST Client" eklentisi ile her isteğin üstündeki "Send Request"e tıklayın.
+@base = http://localhost:3000
+
+### --- 02 / 03 / 04 ---
+
+GET {{base}}/api/saat
+
+###
+GET {{base}}/api/kullanicilar?sehir=İstanbul
+
+###
+GET {{base}}/api/kullanicilar/2
+
+### req'in parçalarını incele (03)
+POST {{base}}/api/istek-incele/42?sirala=yeni
+Content-Type: application/json
+X-Dil: tr
+
+{ "metin": "Merhaba" }
+
+### res yanıt türleri (03): json | metin | bos | yonlendir
+GET {{base}}/api/yanit/json
+
+###
+POST {{base}}/api/echo
+Content-Type: application/json
+
+{ "mesaj": "merhaba" }
+
+###
+GET {{base}}/api/gizli
+X-API-Key: gizli123
+
+### req'e eklenen bilgi (04) — X-Istek-Id header'ına bakın
+GET {{base}}/api/istek
+
+### next(err) ile 400 (04)
+GET {{base}}/api/sayi/abc
+
+###
+GET {{base}}/api/patla
+
+### --- 05 Todo API ---
+
+GET {{base}}/todos
+
+###
+GET {{base}}/todos?done=false
+
+###
+GET {{base}}/todos/1
+
+###
+POST {{base}}/todos
+Content-Type: application/json
+
+{ "title": "Workshop'u bitir" }
+
+### Hatalı istek → 400
+POST {{base}}/todos
+Content-Type: application/json
+
+{ "title": "" }
+
+###
+PATCH {{base}}/todos/2
+Content-Type: application/json
+
+{ "done": true }
+
+###
+DELETE {{base}}/todos/1
+
+### Olmayan görev → 404
+GET {{base}}/todos/999
+
+### --- 06 JSON DB: aynı istekler, ama veriler sunucu yeniden başlayınca da kalır ---
+# Görev ekleyin, sunucuyu Ctrl+C ile durdurup tekrar başlatın, sonra GET /todos
