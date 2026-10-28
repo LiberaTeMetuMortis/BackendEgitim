@@ -14,8 +14,7 @@ Bu dosya, hiçbir şey kurulu olmayan bir bilgisayardan başlayıp tüm örnekle
 4. [Bağımlılıkları kurma](#4-bağımlılıkları-kurma)
 5. [Örnekleri çalıştırma](#5-örnekleri-çalıştırma)
 6. [Sunucuya istek atma](#6-sunucuya-istek-atma)
-7. [Slaytlar](#7-slaytlar)
-8. [Sık karşılaşılan sorunlar](#8-sık-karşılaşılan-sorunlar)
+7. [Sık karşılaşılan sorunlar](#7-sık-karşılaşılan-sorunlar)
 
 ---
 
@@ -260,25 +259,10 @@ curl -X DELETE http://localhost:3000/todos/1 -i
 > ```
 > Ya da Git Bash kullanın; ya da en kolayı, REST Client'ı tercih edin.
 
----
-
-## 7. Slaytlar
-
-`slides/part1.md` bir [Marp](https://marp.app) sunumudur. Hazır çıktılar `slides/part1.html` ve `slides/part1.pdf` olarak depoda bulunur.
-
-Yeniden üretmek için (ilk çalıştırmada Marp CLI `npx` ile otomatik indirilir, internet gerekir):
-
-```bash
-npm run slaytlar        # tarayıcıda önizleme
-npm run slaytlar:html   # slides/part1.html üret
-npm run slaytlar:pdf    # slides/part1.pdf üret (Chrome/Chromium/Edge gerekir)
-```
-
-Ya da VS Code'da **Marp for VS Code** eklentisiyle dosyayı açıp önizleyin.
 
 ---
 
-## 8. Sık karşılaşılan sorunlar
+## 7. Sık karşılaşılan sorunlar
 
 | Belirti | Sebep / Çözüm |
 |---------|---------------|
