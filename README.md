@@ -112,7 +112,7 @@ nvm use lts
 **Git ile:**
 
 ```bash
-git clone <depo-adresi> backend-workshop
+git clone https://github.com/LiberaTeMetuMortis/BackendEgitim.git backend-workshop
 cd backend-workshop
 ```
 
